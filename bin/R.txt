@@ -358,11 +358,7 @@ int layout fragment_home_page 0x7f03001c
 int layout fragment_recent_search_page 0x7f03001d
 int layout fragment_search_location_page 0x7f03001e
 int layout fragment_search_page 0x7f03001f
-int layout home_page 0x7f030020
-int layout recent_search_page 0x7f030021
-int layout search_location_page 0x7f030022
-int layout search_page 0x7f030023
-int layout support_simple_spinner_dropdown_item 0x7f030024
+int layout support_simple_spinner_dropdown_item 0x7f030020
 int menu home_page 0x7f0c0000
 int menu recent_search_page 0x7f0c0001
 int menu search_location_page 0x7f0c0002
