@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.capacityprototype"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:columnCount="1"
+    app:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_column="0"
+        app:layout_gravity="left|top"
+        app:layout_row="0" >
+    </LinearLayout>
+
+</android.support.v7.widget.GridLayout>
