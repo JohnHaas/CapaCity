@@ -1092,6 +1092,15 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f06000d;
+        /**  Default screen margins, per the Android Design guidelines. 
+
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+         */
+        public static final int activity_horizontal_margin=0x7f060012;
+        public static final int activity_vertical_margin=0x7f060013;
         /**  The default gap between components in a layout. 
          */
         public static final int default_gap=0x7f060000;
@@ -1198,6 +1207,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050027;
         public static final int action_menu_presenter=0x7f050028;
         public static final int action_mode_close_button=0x7f050035;
+        public static final int action_settings=0x7f050051;
         public static final int activity_chooser_view_content=0x7f050036;
         public static final int alignBounds=0x7f050002;
         public static final int alignMargins=0x7f050003;
@@ -1211,6 +1221,7 @@ containing a value of this type.
         public static final int clip_horizontal=0x7f05000f;
         public static final int clip_vertical=0x7f05000e;
         public static final int collapseActionView=0x7f05001f;
+        public static final int container=0x7f050050;
         public static final int default_activity_button=0x7f050039;
         public static final int dialog=0x7f050020;
         public static final int disableHome=0x7f05001a;
@@ -1318,11 +1329,25 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int activity_fullscreen=0x7f030017;
-        public static final int home_page=0x7f030018;
-        public static final int recent_search_page=0x7f030019;
-        public static final int search_location_page=0x7f03001a;
-        public static final int search_page=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_home_page=0x7f030018;
+        public static final int activity_recent_search_page=0x7f030019;
+        public static final int activity_search_location_page=0x7f03001a;
+        public static final int activity_search_page=0x7f03001b;
+        public static final int fragment_home_page=0x7f03001c;
+        public static final int fragment_recent_search_page=0x7f03001d;
+        public static final int fragment_search_location_page=0x7f03001e;
+        public static final int fragment_search_page=0x7f03001f;
+        public static final int home_page=0x7f030020;
+        public static final int recent_search_page=0x7f030021;
+        public static final int search_location_page=0x7f030022;
+        public static final int search_page=0x7f030023;
+        public static final int support_simple_spinner_dropdown_item=0x7f030024;
+    }
+    public static final class menu {
+        public static final int home_page=0x7f0c0000;
+        public static final int recent_search_page=0x7f0c0001;
+        public static final int search_location_page=0x7f0c0002;
+        public static final int search_page=0x7f0c0003;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1365,9 +1390,15 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
+        public static final int action_settings=0x7f0a0012;
         public static final int app_name=0x7f0a000d;
         public static final int dummy_button=0x7f0a000e;
         public static final int dummy_content=0x7f0a000f;
+        public static final int hello_world=0x7f0a0011;
+        public static final int title_activity_home_page=0x7f0a0010;
+        public static final int title_activity_recent_search_page=0x7f0a0013;
+        public static final int title_activity_search_location_page=0x7f0a0015;
+        public static final int title_activity_search_page=0x7f0a0014;
     }
     public static final class style {
         /** 

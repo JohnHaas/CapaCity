@@ -1,5 +1,7 @@
 package com.example.capacityprototype;
-
+/**
+ * DON'T TRY TO USE THIS FILE, ONLY REFERENCE IT AS AN EXAMPLE
+ */
 import com.example.capacityprototype.util.SystemUiHider;
 
 import android.annotation.TargetApi;

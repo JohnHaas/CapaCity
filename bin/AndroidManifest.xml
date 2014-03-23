@@ -24,6 +24,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.capacityprototype.HomePage"
+            android:label="@string/title_activity_home_page" >
+        </activity>
+        <activity
+            android:name="com.example.capacityprototype.RecentSearchPage"
+            android:label="@string/title_activity_recent_search_page" >
+        </activity>
+        <activity
+            android:name="com.example.capacityprototype.SearchPage"
+            android:label="@string/title_activity_search_page" >
+        </activity>
+        <activity
+            android:name="com.example.capacityprototype.SearchLocationPage"
+            android:label="@string/title_activity_search_location_page" >
+        </activity>
     </application>
 
 </manifest>
