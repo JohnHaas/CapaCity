@@ -11,14 +11,14 @@ bin/
 gen/
 
 # Eclipse .gitignore
-local.properties
+.classpath
 .project
+.loadpath
 .metadata
+*.tmp
+.settings/
 bin/
 temp/
-*.tmp
-.classpath
-.settings/
-.loadpath
 proguard/
+local.properties
 
