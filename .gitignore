@@ -1,0 +1,24 @@
+# Android .gitignore
+*.apk
+*.ap_
+
+# Windows thumbnail db
+.DS_Store
+
+# Java & Generated
+*.class
+bin/
+gen/
+
+# Eclipse .gitignore
+local.properties
+.project
+.metadata
+bin/
+temp/
+*.tmp
+.classpath
+.settings/
+.loadpath
+proguard/
+
