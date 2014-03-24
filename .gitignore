@@ -13,6 +13,7 @@ gen/
 # Eclipse .gitignore
 .classpath
 .project
+project.properties
 .loadpath
 .metadata
 *.tmp
