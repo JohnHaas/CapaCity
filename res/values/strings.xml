@@ -10,5 +10,28 @@
     <string name="title_activity_recent_search_page">RecentSearchPage</string>
     <string name="title_activity_search_page">SearchPage</string>
     <string name="title_activity_search_location_page">SearchLocationPage</string>
+    
+    
+    <!-- Search Page -->
+    
+    <string name="search_title">Find Restaurants&#8230;</string>
+    <string name="search_button_send">Go</string>
+    
+    <string name="prefs_title">Preferences</string>
+    <string name="pref1">Open Now</string>
+    <string name="pref2">Delivery</string>
+    <string name="pref3">Reservation</string>
+    
+    <string name="price_title">Price</string>
+    <string name="price1">$</string>
+    <string name="price2">$$</string>
+    <string name="price3">$$$</string>
+    <string name="price4">$$$$</string>
+    
+    <string name="dist_title">Distance (km)</string>
+    <string name="dist1">1</string>
+    <string name="dist2">3</string>
+    <string name="dist3">5</string>
+    <string name="dist4">10</string>
 
 </resources>

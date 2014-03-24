@@ -8,9 +8,172 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.capacityprototype.SearchPage$PlaceholderFragment" >
 
-    <TextView
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="@string/search_button_send" />
+
+    <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:hint="@string/search_title"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <!-- Preferences -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="20dp"
+        android:text="@string/prefs_title" />
+
+    <ToggleButton
+        android:id="@+id/ToggleButton01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton1"
+        android:layout_alignBottom="@+id/toggleButton1"
+        android:layout_centerHorizontal="true"
+        android:textOn="@string/pref2"
+        android:textOff="@string/pref2"
+        android:text="@string/pref2" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:textOn="@string/pref1"
+        android:textOff="@string/pref1"
+        android:text="@string/pref1" />
+
+    <ToggleButton
+        android:id="@+id/ToggleButton02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ToggleButton01"
+        android:layout_alignBottom="@+id/ToggleButton01"
+        android:layout_alignRight="@+id/button1"
+        android:textOn="@string/pref3"
+        android:textOff="@string/pref3"
+        android:text="@string/pref3" />
+
+    
+    <!-- Price -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton1"
+        android:layout_below="@+id/toggleButton1"
+        android:layout_marginTop="28dp"
+        android:text="@string/price_title" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_toRightOf="@+id/textView1"
+        android:textOn="@string/price2"
+        android:textOff="@string/price2"
+        android:text="@string/price2" />
+    
+    <ToggleButton
+        android:id="@+id/toggleButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignLeft="@+id/toggleButton8"
+        android:textOn="@string/price3"
+        android:textOff="@string/price3"
+        android:text="@string/price3" />
+    
+
+    <!-- Distance -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton2"
+        android:layout_below="@+id/toggleButton2"
+        android:layout_marginTop="34dp"
+        android:text="@string/dist_title" />
+    
+    <ToggleButton
+        android:id="@+id/toggleButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="17dp"
+        android:textOn="@string/dist1"
+        android:textOff="@string/dist1"
+        android:text="@string/dist1" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toggleButton5"
+        android:layout_alignLeft="@+id/toggleButton3"
+        android:textOn="@string/dist2"
+        android:textOff="@string/dist2"
+        android:text="@string/dist2" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton6"
+        android:layout_alignBottom="@+id/toggleButton6"
+        android:layout_alignRight="@+id/editText1"
+        android:textOn="@string/dist3"
+        android:textOff="@string/dist3"
+        android:text="@string/dist3" />
+    
+    <ToggleButton
+        android:id="@+id/toggleButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton6"
+        android:layout_alignBottom="@+id/toggleButton6"
+        android:layout_alignRight="@+id/toggleButton4"
+        android:textOn="@string/dist4"
+        android:textOff="@string/dist4"
+        android:text="@string/dist4" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton9"
+        android:layout_alignBottom="@+id/toggleButton9"
+        android:layout_alignRight="@+id/ToggleButton02"
+        android:text="@string/price4"
+        android:textOff="@string/price4"
+        android:textOn="@string/price4" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:text="@string/price1"
+        android:textOff="@string/price1"
+        android:textOn="@string/price1" />
 
 </RelativeLayout>
