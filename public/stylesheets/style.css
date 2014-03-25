@@ -31,15 +31,23 @@ a {
 .sideMargin {
 	position: relative;
 	margin-top: 100px;
-	width: 15%;
+	width: 13%;
 	height: 100%;
 	float: left;
 	background-color: #EBEBEB;
 }
 
+#leftMargin {
+	border-right: solid 1px #6E6E6E;
+}
+
+#rightMargin {
+	border-left: solid 1px #6E6E6E;
+}
+
 #contentContainer {
 	margin-top: 100px;
-	width: 70%;
+	width: 73.85%;
 	height: 100%;
 	float: left;
 	position: relative;
