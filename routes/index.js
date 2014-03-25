@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-	res.render('index', { title: 'KappaCity' });
+	res.render('index', { title: 'CapaCity' });
 };
 
 exports.search = function(req, res){
