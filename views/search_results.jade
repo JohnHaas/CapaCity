@@ -5,9 +5,12 @@ block content
 		br
 		a(href='#') sort / filter
 	div#search-results
-		div.search-result-box Sakanaya
-		div.search-result-box Benehana's
-		div.search-result-box Pizza Hut
+		each result in data
+			div.search-result-box
+				h2 #{result.name}
+				h3
+					span.label.label-success #{result.wait} min.
+				p.lead a fascinating description
 	div#search-info-pane
 		div#search-map
 		div.search-info-box
