@@ -1,4 +1,8 @@
 .homeCustom{
-	background-color: rgba(144,238,144, 0.4);
+	background-color: rgba(255,255,255,0.4);
 	/* In case you were wondering, this is how you do opacity! */
+}
+
+.homeP{
+	font-size: 25px;
 }
