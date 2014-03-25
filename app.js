@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  */
+// require('./public/javascripts/restaurantSchema');
 
 var express = require('express');
 var routes = require('./routes');

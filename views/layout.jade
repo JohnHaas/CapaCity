@@ -3,8 +3,8 @@ html
 	head
 		title= title
 		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/search_style.css')
 		link(rel='stylesheet', href='/stylesheets/homepage-style.css')
 	body
@@ -12,7 +12,7 @@ html
 			a(href='/')
 				img(src='/images/CapaCityLogoCropped.png', alt="CapaCity Home")
 
-			form#new-search(method="get", action="http://www.google.com")
+			form#new-search(method="get", action="/search")
 				input.search-input(type="text", name="q", size="21", maxlength="120")
 				input.search-button(type="submit", value="Search")
 		div#content-container
