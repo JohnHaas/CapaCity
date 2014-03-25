@@ -1,17 +1,16 @@
-extends search_layout
+extends layout
 
 block content
-	div.main #{query}
-		div#filter-container
-			a(href='#') sort / filter
-		div#results
-			div.result-box Margoli's
-			div.result-box Benehana's
-			div.result-box Pizza Hut
-		div#info-pane
-			h3 map
-			div#map
-			div.info-box
-				h3 info
-			div.info-box
-				h3 reviews
+	div#search-filter-container #{query}
+		br
+		a(href='#') sort / filter
+	div#search-results
+		div.search-result-box Sakanaya
+		div.search-result-box Benehana's
+		div.search-result-box Pizza Hut
+	div#search-info-pane
+		div#search-map
+		div.search-info-box
+			h3 info
+		div.search-info-box
+			h3 reviews
