@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-	res.render('index', { title: 'Ass' });
+	res.render('index', { title: 'KappaCity' });
 };
 
 exports.search = function(req, res){
@@ -18,7 +18,7 @@ exports.search = function(req, res){
 				"wait": "5"
 			},
 			{
-				"name": "Benehana's",
+				"name": "Benehana",
 				"wait": "8"
 			},
 			{
