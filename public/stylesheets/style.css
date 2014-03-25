@@ -8,6 +8,62 @@ a {
 	color: #00B7FF;
 }
 
+.textLightGreen{
+	color: #cfe5ae;
+}
+
+.textDarkBrown{
+	color: #22281c;
+}
+
+.textLightBrown{
+	color:#6c5a53;
+}
+
+.textLightBlue{
+	color: #aad8d3;
+}
+
+.textPurple{
+	color: #3d306a;
+}
+
+.textPeriwinkle{
+	color: #4354a1;
+}
+
+.textAqua{
+	color: #11a99e;
+}
+
+.backgroundLightGreen{
+	background-color: #cfe5ae;
+}
+
+.backgroundDarkBrown{
+	background-color: #22281c;
+}
+
+.backgroundLightBrown{
+	background-color:#6c5a53;
+}
+
+.backgroundLightBlue{
+	background-color: #aad8d3;
+}
+
+.backgroundPurple{
+	background-color: #3d306a;
+}
+
+.backgroundPeriwinkle{
+	background-color: #4354a1;
+}
+
+.backgroundAqua{
+	background-color: #11a99e;
+}
+
 #jumbotron {
 	position: absolute;
 	z-index: 1;
