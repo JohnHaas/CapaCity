@@ -11,7 +11,8 @@ var Restaurant = new Schema({
 	updated : Date,
 	serviceTime : Number,
 	numServers : Number,
-	interarrivalTime : Number
+	interarrivalTime : Number,
+	wait : Number
 });
 
 mongoose.model('Restaurant', Restaurant)
