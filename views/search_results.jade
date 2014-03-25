@@ -1,0 +1,17 @@
+extends search_layout
+
+block content
+	div.main #{query}
+		div#filter-container
+			a(href='#') sort / filter
+		div#results
+			div.result-box Margoli's
+			div.result-box Benehana's
+			div.result-box Pizza Hut
+		div#info-pane
+			h3 map
+			div#map
+			div.info-box
+				h3 info
+			div.info-box
+				h3 reviews
