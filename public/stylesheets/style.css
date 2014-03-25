@@ -100,13 +100,15 @@ a {
 	position: relative;
 	height: 100%;
 	background-color: #EDEDED;
-	padding: 0.01% 13%;
+	padding-top: 0.01%;
 }
 
 #content {
-	width: 100%;
+	width: 74%;
 	height: 1600px;
 	margin-top: 100px;
-	background-color: #FFF;
+	margin: 100px 13%;
+	background-color: #E6E6F0;
 	border: solid 1px #DBDBDB;
+	padding: 30px;
 }
