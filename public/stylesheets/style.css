@@ -27,7 +27,7 @@ a {
 	border-bottom-style: solid;
 	border-bottom-color: #cfe5ae;
 	border-bottom-width: 1px;
-	box-shadow: none 1px 50px black;
+	box-shadow: 1px 1px 10px #B6BAB7;
 }
 
 #jumbotron>a {
@@ -44,15 +44,15 @@ a {
 	width: 13%;
 	height: 100%;
 	float: left;
-	background-color: #EBEBEB;
+	background-color: #EDEDED;
 }
 
 #left-margin {
-	border-right: solid 1px #ADADAD;
+	border-right: solid 1px #DBDBDB;
 }
 
 #right-margin {
-	border-left: solid 1px #ADADAD;
+	border-left: solid 1px #DBDBDB;
 }
 
 #content-container {
