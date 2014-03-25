@@ -70,7 +70,6 @@ a {
 	width: 100%;
 	height: 100px;
 	clear: both;
-	background-color: #cfe5ae;
 	overflow: hidden;
 	line-height: 100px;
 	background-image: -webkit-gradient(
@@ -81,9 +80,10 @@ a {
 	color-stop(0.87, #565EB0)
 	);
 
-	border-bottom-style: solid;
-	border-bottom-color: #cfe5ae;
-	border-bottom-width: 1px;
+	/*border-bottom-style: solid;*/
+	/*border-bottom-color: #cfe5ae;*/
+	/*border-bottom-width: 1px;*/
+	
 	box-shadow: 1px 1px 10px #B6BAB7;
 }
 
