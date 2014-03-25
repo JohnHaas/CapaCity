@@ -1,11 +1,13 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-	header
-		h1= title
-		p Welcome to #{title}
-		div #{query}
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		div#jumbotron 
+			a(href='/')
+				img(src='/images/CapaCityLogo1.png', alt="CapaCity Home")
+		div.sideMargin
+		div#contentContainer
+			block content
+		div.sideMargin
