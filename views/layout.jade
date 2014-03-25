@@ -11,6 +11,10 @@ html
 		div#jumbotron 
 			a(href='/')
 				img(src='/images/CapaCityLogoCropped.png', alt="CapaCity Home")
+			div.search-box
+				form#new-search(method="get", action="http://www.google.com")
+					input.search-input(type="text", name="q", size="21", maxlength="120")
+					input.search-button(type="submit", value="search")
 		div#content-container
 			div#content.background-light-green
 				block content
