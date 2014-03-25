@@ -21,9 +21,10 @@ a {
 	linear,
 	left top,
 	left bottom,
-	color-stop(0, #CFE5AE),
-	color-stop(0.89, #9FB086)
+	color-stop(0, #747EED),
+	color-stop(0.87, #565EB0)
 	);
+
 	border-bottom-style: solid;
 	border-bottom-color: #cfe5ae;
 	border-bottom-width: 1px;
