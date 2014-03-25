@@ -27,6 +27,7 @@ a {
 	border-bottom-style: solid;
 	border-bottom-color: #cfe5ae;
 	border-bottom-width: 1px;
+	box-shadow: none 1px 50px black;
 }
 
 #jumbotron>a {
@@ -38,19 +39,30 @@ a {
 	left: 100px;
 }
 
-.sideMargin {
+.side-margin {
 	position: relative;
-	margin-top: 100px;
-	width: 15%;
+	width: 13%;
 	height: 100%;
 	float: left;
 	background-color: #EBEBEB;
 }
 
-#contentContainer {
-	margin-top: 100px;
-	width: 70%;
+#left-margin {
+	border-right: solid 1px #ADADAD;
+}
+
+#right-margin {
+	border-left: solid 1px #ADADAD;
+}
+
+#content-container {
+	width: 73.85%;
 	height: 100%;
 	float: left;
 	position: relative;
+}
+
+#content {
+	margin-top: 100px;
+	width: 100%;
 }
