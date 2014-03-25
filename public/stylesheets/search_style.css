@@ -7,6 +7,7 @@
 #search-results{
 	float: left;
 	width: 42%;
+	height:auto;
 }
 
 .search-result-box{
