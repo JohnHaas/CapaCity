@@ -6,7 +6,7 @@
 
 #search-results{
 	float: left;
-	width: 42%;
+	width: 37%;
 	height:auto;
 }
 
@@ -15,14 +15,14 @@
 	color: black;
 	border: 1px solid whitesmoke;
 	padding: 10px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
 
 
 #search-info-pane{
-	margin-left: 42%;
-	padding-left: 20px;
+	margin-left: 37%;
+	padding-left: 15px;
 }
 
 #search-info-pane:after{
