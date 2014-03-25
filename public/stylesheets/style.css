@@ -72,13 +72,13 @@ a {
 	background-color: #CFE5AE;
 	overflow: hidden;
 	line-height: 100px;
-	/*background-image: -webkit-gradient(
+	background-image: -webkit-gradient(
 	linear,
 	left top,
 	left bottom,
-	color-stop(0, #CFE5AE),
-	color-stop(0.89, #9FB086)
-	);*/
+	color-stop(0, #747EED),
+	color-stop(0.87, #565EB0)
+	);
 	border-bottom-style: solid;
 	border-bottom-color: #CFE5AE;
 	border-bottom-width: 1px;
