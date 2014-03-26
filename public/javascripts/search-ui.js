@@ -19,6 +19,12 @@ $('#search-results').on('click', 'div', function(){
 		map.setZoom(map._zoom);
 	}
 	map.panTo(loc);
+
+	//move window back to top
+	var resultTop = $('#search-results').offset().top;
+	if ($(document).scrollTop() > resultTop){
+		window.scrollTo(0, resultTop);
+	}
 });
 
 
