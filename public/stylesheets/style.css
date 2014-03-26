@@ -2,6 +2,7 @@ html, body {
 	/*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 	margin: 0px;
 	height: 2000px;
+	overflow: auto;
 }
 
 a {
