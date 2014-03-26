@@ -8,6 +8,10 @@ a {
 	color: #00B7FF;
 }
 
+.multiline-p {
+	white-space: pre;
+}
+
 .text-light-green{
 	color: #cfe5ae;
 }
