@@ -13,11 +13,22 @@ html
 		div#subtron 
 			ul#subtron-list
 				li.subtron-list-item
-					a.subtron-button.background-light-green poop
+					a.subtron-button.background-purple Home
 				li.subtron-list-item
 					form#new-search(method="get", action="/search")
-						input.search-input(type="text", name="food-input", size="21", maxlength="120")
-						input.search-input(type="text", name="location-input", size="21", maxlength="120")
+						input.search-input(type="text", name="food-input", size="21", maxlength="120", value="Search for food")
+						input.search-input(type="text", name="location-input", size="21", maxlength="120", value="Enter Location")
+						select.search-input(name="time-input")
+							option(value="default", selected) Max wait time
+							option(value="5") 5 min
+							option(value="10") 10 min
+							option(value="15") 15 min
+							option(value="30") 30 min
+							option(value="45") 45 min
+							option(value="60") 1 hr
+							option(value="90") 1 hr 30 min
+							option(value="120") 2 hrs
+
 						input.search-button(type="submit", value="Search")
 		div#jumbotron.background-periwinkle
 			a#jumbotron-logo(href='/')
