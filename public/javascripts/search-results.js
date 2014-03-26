@@ -6,6 +6,7 @@
 // Get query parameters
 var food = $('#search-query').text();
 var loc = $('#search-location').text();
+var wait = $('#search-wait').text();
 var locURL = "https://maps.googleapis.com/maps/api/geocode/json?sensor=false&address="+encodeURIComponent(loc);
 if (loc !== ""){
 	$.getJSON(locURL, function (data) {
@@ -82,6 +83,18 @@ function loadResults() {
 		}
 
 		$('#search-results').html(html);
+
+		//fade in one-by-one
+		$('.search-result-box').hide().each(function(i, el){
+			(function (i, el){
+				setTimeout(function(){
+					$(el).fadeIn();
+				}, i*200);
+			})(i, el);
+		});
+
+
+
 	});
 }
 

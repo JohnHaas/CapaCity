@@ -2,6 +2,25 @@
  * This file contains view logic for the UI of the search results page
  */
 
+
+// show/hide filter options
+$('#filterToggle').click(function(e){
+	$('#search-filter-options').slideToggle();
+	return false;
+});
+
+// buttons within options
+$('.btn').button();
+// $('#wait-group .btn').button();
+
+// $('#price-group .btn').button();
+
+// $('#dist-group .btn').button();
+
+// $('#pref-group .btn').button();
+
+
+
 // Responsive layout
 window.mobile = false;
 window.addEventListener("resize", responsiveResize, true);

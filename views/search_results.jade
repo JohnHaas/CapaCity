@@ -7,12 +7,39 @@ block content
 				span#search-query #{food} 
 				span near 
 				span#search-location #{location}
-		br
-		a(href='#') sort / filter
-		div wait
-		div price
-		div distance
-		div preference
+		div#search-filter-options
+			div#search-options-left
+				h4 wait 
+				div.btn-group#wait-group(data-toggle="buttons")
+					div(type="radio").btn.btn-primary 5
+					div(type="radio").btn.btn-primary 10
+					div(type="radio").btn.btn-primary 15
+					div(type="radio").btn.btn-primary 30
+					div(type="radio").btn.btn-primary 45
+					div(type="radio").btn.btn-primary 60
+					div(type="radio").btn.btn-primary 90
+					div(type="radio").btn.btn-primary 120
+				h4 price 
+				div.btn-group#price-group(data-toggle="buttons")
+					div(type="radio").btn.btn-primary $
+					div(type="radio").btn.btn-primary $$
+					div(type="radio").btn.btn-primary $$$
+					div(type="radio").btn.btn-primary $$$$
+			div#search-options-right
+				h4 distance (km) 
+				div.btn-group#dist-group(data-toggle="buttons")
+					div(type="radio").btn.btn-primary 1
+					div(type="radio").btn.btn-primary 3
+					div(type="radio").btn.btn-primary 5
+					div(type="radio").btn.btn-primary 10+
+				h4 preference 
+				div.btn-group#pref-group(data-toggle="buttons")
+					div(type="radio").btn.btn-primary open now
+					div(type="radio").btn.btn-primary delivery
+					div(type="radio").btn.btn-primary reservation
+			br
+			br
+		a#filterToggle(href='#') sort / filter
 	div#search-results
 		each result in data
 			div.search-result-box
@@ -36,6 +63,6 @@ block content
 			p.lead.search-result-box-description Aenean porta quam eget faucibus mattis. Phasellus nec lacus felis. 
 			br
 			p.lead.search-result-box-description Aenean tempus in mauris ac venenatis. Fusce tristique posuere tortor quis vehicula.
+	script(src='/javascripts/search-ui.js')
 	script(src='/javascripts/google-maps.js')
 	script(src='/javascripts/search-results.js')
-	script(src='/javascripts/search-ui.js')
