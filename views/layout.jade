@@ -10,20 +10,17 @@ html
 		link(rel='icon', type='image/png', href='/images/favicon.png')
 	body
 		div#subtron 
-			
-			ul#jumbolist
-				li.jumbolistitem
-					div#logopush
-						a.jumbobutton.background-light-green poop
-
-				li.jumbolistitem
+			ul#subtron-list
+				li.subtron-list-item
+					a.subtron-button.background-light-green poop
+				li.subtron-list-item
 					form#new-search(method="get", action="/search")
-						input.search-input(type="text", name="q", size="21", maxlength="120")
+						input.search-input(type="text", name="food-input", size="21", maxlength="120")
+						input.search-input(type="text", name="location-input", size="21", maxlength="120")
 						input.search-button(type="submit", value="Search")
 		div#jumbotron.background-periwinkle
-			a#jumbologo(href='/')
+			a#jumbotron-logo(href='/')
 						img(src='/images/CapaCityLogoCropped75.png', alt="CapaCity Home")
-
 		div#content-container
 			div#content.background-light-green
 				block content
