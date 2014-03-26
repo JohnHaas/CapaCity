@@ -1,3 +1,7 @@
+/*
+ * This file controls fetching results
+ * and setting up the map using the Google Maps API
+ */
 
 // Get query parameters
 var food = $('#search-query').text();
@@ -56,6 +60,7 @@ function loadResults() {
 		for (var i=0; i<len; i++){
 			var r = results[i];
 
+			// construct html string for each result
 			html += "<div class='search-result-box'>"
 			+ "<h4>"+r.name+"</h4>"
 			+ "<p class='lead search-result-box-description'>"

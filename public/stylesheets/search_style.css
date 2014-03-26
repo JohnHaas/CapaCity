@@ -32,6 +32,11 @@
 	color: rgb(50,50,50);
 }
 
+.fullsize{
+	margin: 0px !important;
+	width: 100% !important;
+}
+
 
 
 #search-info-pane{
