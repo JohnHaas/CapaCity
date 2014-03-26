@@ -35,7 +35,8 @@ $('#search-results').on('click', 'div', function(){
 
 		// update phone and url
 		var html = "";
-		html += "<b>Phone: </b>"+d.formatted_phone_number+"<br>"
+		html += "<b>Address: </b>" + d.formatted_address + "<br>"
+		+ "<b>Phone: </b>"+d.formatted_phone_number+"<br>"
 		+ "<b>Website: </b><a href='"+d.website+"'>"+d.website+"</a><br>";
 
 		$('#search-selected-description').html(html);
