@@ -53,19 +53,75 @@ block content
 			h3#search-selected-title
 			p.lead.search-result-box-description#search-selected-description
 		div.search-info-box
-			h3 info
-			p.lead.search-result-box-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius sem augue, non ornare eros hendrerit in. Integer sed odio sed nisl lacinia posuere nec egestas nulla. 
-		div.search-info-box
 			h3 reviews
-			p.lead.search-result-box-description Donec sit amet felis sollicitudin, laoreet risus quis, pellentesque felis. 
-			br
-			p.lead.search-result-box-description In hac habitasse platea dictumst. 
-			br
-			p.lead.search-result-box-description Nullam pretium quam lectus, in volutpat orci varius et. 
-			br
-			p.lead.search-result-box-description Aenean porta quam eget faucibus mattis. Phasellus nec lacus felis. 
-			br
-			p.lead.search-result-box-description Aenean tempus in mauris ac venenatis. Fusce tristique posuere tortor quis vehicula.
+			ul.search-ul-custom
+				li
+					div.row-fluid
+						div.col-md-3
+							ul.search-ul-custom
+								li
+									a(href='/')
+										img.search-user-icon(src='/images/UserPhoto.png', alt="User Photo")
+								li
+									a(href='/') 
+										p Miranda Asheath
+								li
+									p Santa Clara, CA
+								li
+									p 173 reviews
+						div.col-md-9
+							p.home-rating-p Rating: 4/5
+							p Reviewed on 3/24/14
+							br
+							p Came here for some dessert on a weeknight, I decided to try the strawberry pudding which my friend recommended and raved about. Honestly, it was just aite. They do come in these cute, little glass jars that you can keep.
+							p I think at later times in the day, a couple hours before closing, they have 2 for 1 sales for their pastries that they need to get rid of. Prices in general seem to be a bit pricier compared to other Asian bakeries. I've tried some of their cakes as well which are pretty decent. Still have yet to try their cronuts, I'll get around to it one day.
+							br
+							br
+							p Was this review helpful?
+							button.home-button-custom Yes
+							button.home-button-custom No
+							br
+							br
+				hr.home-horizontal-separator					
+				li
+					div.row-fluid
+						div.col-md-3
+							ul.search-ul-custom
+								li
+									a(href='/')
+										img.search-user-icon(src='/images/UserPhoto.png', alt="User Photo")
+								li
+									a(href='/') 
+										p Cordelia Sha
+								li
+									p Mountain View, CA
+								li
+									p 473 reviews
+						div.col-md-9
+							p.home-rating-p Rating: 4/5
+							p Reviewed on: 3/26/14
+							br
+							p I've been looking for those everywhere and randomly walked in to Paris Baguette one day and saw them and was super exited and hoped that it lived up to the hype.
+							p It did. It's actually a super simple blend of croissant and a donut with a little cream swirled on top, but it was really good. The texture was like a croissant, but the flavor was like a donut. Definitely best of both worlds!
+							p The store itself is pretty nice. Super modern, big windows, high ceilings and you go around with your tray picking out what sweet/savory bakery items that you want. I think they run out pretty quickly and the items change all the time so you might not always find what you're looking for, but trust me, you will definitely find something. 
+							br
+							br
+							p Was this review helpful?
+							button.home-button-custom Yes
+							button.home-button-custom No
+
+
+
+							
+			//- p.lead.search-result-box-description Donec sit amet felis sollicitudin, laoreet risus quis, pellentesque felis. 
+			//- br
+			//- p.lead.search-result-box-description In hac habitasse platea dictumst. 
+			//- br
+			//- p.lead.search-result-box-description Nullam pretium quam lectus, in volutpat orci varius et. 
+			//- br
+			//- p.lead.search-result-box-description Aenean porta quam eget faucibus mattis. Phasellus nec lacus felis. 
+			//- br
+			//- p.lead.search-result-box-description Aenean tempus in mauris ac venenatis. Fusce tristique posuere tortor quis vehicula.
 	script(src='/javascripts/search-ui.js')
 	script(src='/javascripts/google-maps.js')
 	script(src='/javascripts/search-results.js')

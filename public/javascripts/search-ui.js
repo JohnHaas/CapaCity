@@ -10,7 +10,7 @@ $('#search-results').on('click', 'div', function(){
 
 	$('#search-selected-title').text(name);
 	$('#search-selected-description').html(desc);
-	$('#search-selected-title, #search-selected-description').hide().fadeIn();
+	$('.search-info-box').hide().fadeIn();
 
 	//map zoom onto marker
 	var loc = markers[name];
