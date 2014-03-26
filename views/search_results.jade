@@ -1,19 +1,28 @@
 extends layout
 
 block content
-	div#search-filter-container #{query}
+	div#search-filter-container
+		h3
+			p Search: 
+				span#search-query #{query}
 		br
 		a(href='#') sort / filter
+		div wait
+		div price
+		div distance
+		div preference
 	div#search-results
 		each result in data
 			div.search-result-box
 				h4 #{result.name}
 				h4
 					span.label.label-success #{result.wait} min.
-				p.lead a fascinating description
+				p.lead.search-result-box-description a fascinating description
 	div#search-info-pane
 		div#search-map
 		div.search-info-box
 			h3 info
 		div.search-info-box
 			h3 reviews
+	script(src='/javascripts/google-maps.js')
+	script(src='/javascripts/search-results.js')
