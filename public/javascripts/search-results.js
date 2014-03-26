@@ -88,7 +88,7 @@ function loadResults() {
 			if (r.opening_hours && r.opening_hours.open_now){
 				html += "Open Now!";
 			} else {
-				hteml += "Currently Closed";
+				html += "Currently Closed";
 			}
 
 			html += "</p></div>";

@@ -226,3 +226,9 @@ a {
 	border: solid 1px #CCCCCC;
 	padding: 30px;
 }
+
+#powered-by-google{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
