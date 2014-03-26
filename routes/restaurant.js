@@ -1,3 +1,9 @@
+var mongoose = require('mongoose');
+var Restaurant = mongoose.model('Restaurant'); // The Comment schema for mongoose
+
+/*
+This is the insertion script for the post call
+*/
 exports.newRestaurant = function(req, res) {
 	
 }
