@@ -10,8 +10,8 @@ exports.index = function(req, res){
 exports.search = function(req, res){
 	// render with mock data
 	res.render('search_results', {
-		title: 'CapaCity | Search Results',
-		food: req.query['food-input'],
+		title: 'CapaCity | Search Results',	
+		food: req.query['search-input'],
 		location: req.query['location-input'],
 		data: []
 	});

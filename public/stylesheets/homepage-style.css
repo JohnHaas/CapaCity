@@ -5,11 +5,11 @@
 
 .vr {
 	width:1px;
-	height: 600px;
-	background-color:#000000;
+	height: 500px;
+	background-color: rgba(82,82,82,.4);
 	position: relative;
 	left: 50%; 
-
+	top: 75px;
 }
 
 .homeP{
