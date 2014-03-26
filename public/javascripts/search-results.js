@@ -72,8 +72,7 @@ function loadResults() {
 			+ "<h3 class='search-time'><span class='label label-primary'>"+Math.floor(Math.random()*50)+" min</span></h3>"
 			+ "<p class='lead search-result-box-description'>"
 				+ "<b class='opacity-50'>Rating</b>: " + (r.rating || 'no rating') + "<br>"
-				+ "<b class='opacity-50'>Price</b>: " + (r.price_level || 'n/a') + "<br>"
-				+ r.types.join(', ') + "<br>";
+				+ "<b class='opacity-50'>Price</b>: " + (r.price_level || 'n/a') + "<br>";
 
 			if (r.opening_hours && r.opening_hours.open_now){
 				html += "open now!";
