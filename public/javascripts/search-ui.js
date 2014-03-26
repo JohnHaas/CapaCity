@@ -25,6 +25,45 @@ $('#search-results').on('click', 'div', function(){
 	if ($(document).scrollTop() > resultTop){
 		window.scrollTo(0, resultTop);
 	}
+
+	// load details (e.g. phone number)
+	var ref = $(this).attr('reference');
+	if (typeof details[ref] === 'undefined'){
+		$('#search-selected-description').text("Loading details...");
+	} else {
+		var d = details[ref];
+
+		// update phone and url
+		var html = "";
+		html += "<b>Phone: </b>"+d.formatted_phone_number+"<br>"
+		+ "<b>Website: </b><a href='"+d.website+"'>"+d.website+"</a><br>";
+
+		$('#search-selected-description').html(html);
+
+		// update reviews
+		html = "";
+		for (i in d.reviews){
+			var r = d.reviews[i];
+			window.r = r;
+
+			html += "<li class='row-fluid'>"
+				+ "<div class='col-md-3'>"
+					+ "<div><a href='#'><img class='search-user-icon alt='user photo' src='/images/UserPhoto.png' /></a></div><br>"
+					+ "<div><a href='"+r.author_url+"'>"+r.author_name+"</a></div>"
+				+ "</div>"
+				+ "<div class='col-md-9 no-padding'>"
+					+ "<p class='home-rating-p'>Rating: "+r.rating+"/5<br>"
+					+ "<p>"+r.text+"</p><br>"
+					+ "<p>Was this review helpful?</p>"
+					+ "<button class='home-button-custom'>Yes</button>"
+					+ "<button class='home-button-custom'>No</button>"
+				+ "</div>"
+			+ "</li>"
+			+ "<hr class='home-horizontal-separator />";
+		}
+		console.log(html)
+		$($('.search-ul-custom')[0]).html(unescape(html));
+	}
 });
 
 

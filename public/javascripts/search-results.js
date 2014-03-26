@@ -24,9 +24,13 @@ var map = new google.maps.Map(document.getElementById('search-map'), {
   center: origin,
   zoom: 15
 });
+var service = new google.maps.places.PlacesService(map);
 
 // Dictionary of restuarant name to map location
 var markers = {};
+
+// Dictionary of restaurant references (maps api) to more information
+var details = {};
 
 // adds a marker to the map
 // params: name, latlong position
@@ -47,7 +51,6 @@ function getPlaces(q, callback, rad){
 		query: q
 	};
 
-	var service = new google.maps.places.PlacesService(map);
 	service.textSearch(request, callback);
 }
 
@@ -58,6 +61,8 @@ function loadResults() {
 	getPlaces(food, function(results){
 		var html = "";
 
+		console.log(results)
+
 		// limit to 5 results
 		var limit = 5;
 		var len = (results.length < limit) ? results.length : limit;
@@ -65,7 +70,7 @@ function loadResults() {
 			var r = results[i];
 
 			// construct html string for each result
-			html += "<div class='search-result-box'>"
+			html += "<div class='search-result-box' reference='"+r.reference+"''>"
 			+ "<h4>"+r.name+"</h4>"
 			+ "<p class='lead search-result-box-description'>"
 				+ r.formatted_address + "</p>"
@@ -83,6 +88,15 @@ function loadResults() {
 			//add marker to map
 			addMarker(r.name, r.geometry.location);
 			markers[r.name] = r.geometry.location;
+
+			//make request to get restaurant details (e.g. phone number)
+			(function(ref) {
+				service.getDetails({
+					reference: ref,
+				}, function(data){
+					details[ref] = data;
+				});
+			})(r.reference);
 		}
 
 		$('#search-results').html(html);
