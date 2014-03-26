@@ -113,7 +113,7 @@ a {
 	width: 100%;
 	/*padding-top: 2px;*/
 	margin: 0;
-	padding-left: 15%;
+	padding-left: 14%;
 	list-style-type: none;
 }
 
@@ -127,7 +127,10 @@ a {
 	margin-right: 5px;
 	text-align: center;
 	text-decoration: none;
-	width: 120px;
+	color:#ffffff;
+	border: 1px solid  #3d306a; 
+
+	width: 100px;
 	height: 25px;
 	font-size: 12px;
 	padding: 5px 10px;
@@ -138,10 +141,18 @@ a {
 	border-radius: 5px;
 }
 
+.subtron-button:hover {
+	color: #ffffff;
+	text-decoration: none;
+	/*purple color scheme*/
+	background: #3d306a;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, #765ECC), color-stop(1, #3A2F66));
+}
+
 #new-search {
 	float: right;
-	padding-right: 50px;
-	/*padding-right: 5%;*/
+	/*padding-right: 50px;*/
+	padding-right: 5%;
 }
 
 .search-input {
