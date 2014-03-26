@@ -37,7 +37,7 @@
 }
 .search-result-box:hover{
 	background-color: darkgreen;
-	color:white;
+	color: white;
 }
 .search-result-box:active{
 	background-color: black;
@@ -72,8 +72,6 @@
 .opacity-50{
 	opacity: .5;
 }
-
-
 
 #search-info-pane{
 	padding-left: 25px;

@@ -19,6 +19,7 @@
 
 .home-horizontal-separator {
 	border-color: rgba(82,82,82,.4);
+	width: 90%;
 }
 
 .home-ul-custom
@@ -45,9 +46,21 @@
 .home-address-container {
 	position: absolute;
 	right: 15px;
-	top: 40px;
+	top: 30px;
 }
 
 .home-address {
 	white-space: pre;
+}
+
+.home-label-size {
+	font-size: 14px;
+}
+
+#home-restaurant-label {
+	margin-bottom: 40px;
+}
+
+.home-restaurant-info-content {
+	margin: 5px 0;
 }

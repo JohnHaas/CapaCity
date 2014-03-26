@@ -24,14 +24,15 @@ block content
 						div.well.home-well-custom
 							p I love wells!
 			div.col-md-6.home-div-custom#restaurants
-				p.home-p.text-dark-brown.text-center Featured Restaurants
+				p.home-p.text-dark-brown.text-center#home-restaurant-label Featured Restaurants
 				ul.home-ul-custom
 					li.home-li-link-custom
 						div.well-sm.home-well-custom
 							div.home-restaurant-info
 								h3 Au Cheval
-								p Price: $$
-								p American, Bars, Diners
+								p.home-restaurant-info-content Rating: 4.6/5
+								p.home-restaurant-info-content Price: $$
+								span.label.label-success.home-label-size 10 min.
 								div.home-address-container
 									p.home-address.
 										800 W Randolph St
@@ -41,15 +42,29 @@ block content
 					li.home-li-link-custom
 						div.well-sm.home-well-custom
 							h3 L2O
-							p Price: $$$$	
-							p Seafood
+							p.home-restaurant-info-content Rating: 4.7/5
+							p.home-restaurant-info-content Price: $$$$	
+							span.label.label-success.home-label-size 57 min.
+							div.home-address-container
+								p.home-address.
+									2300 N Lincoln Park W
+									Chicago, IL 60614
+									Phone number: (773) 868-0002
+								
 						hr.home-horizontal-separator
 					li.home-li-link-custom
 						div.well-sm.home-well-custom
 							h3 Little Goat
-							p Price: $$ 	
-							p American, Diners
+							p.home-restaurant-info-content Rating: 4.4/5
+							p.home-restaurant-info-content Price: $$ 
+							span.label.label-success.home-label-size 36 min.
+							div.home-address-container
+								p.home-address.
+									820 W Randolph St
+									Chicago, IL 60607
+									Phone number: (312) 888-3455
 			div.home-vr
+	hr.home-horizontal-separator
 	br
 	div.containter-fluid
 		div.col-md-12.home-div-custom#reviews
