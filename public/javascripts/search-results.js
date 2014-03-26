@@ -6,6 +6,7 @@
 // Get query parameters
 var food = $('#search-query').text();
 var loc = $('#search-location').text();
+var wait = $('#search-wait').text();
 var locURL = "https://maps.googleapis.com/maps/api/geocode/json?sensor=false&address="+encodeURIComponent(loc);
 if (loc !== ""){
 	$.getJSON(locURL, function (data) {
@@ -23,6 +24,9 @@ var map = new google.maps.Map(document.getElementById('search-map'), {
   center: origin,
   zoom: 15
 });
+
+// Dictionary of restuarant name to map location
+var markers = {};
 
 // adds a marker to the map
 // params: name, latlong position
@@ -67,8 +71,8 @@ function loadResults() {
 				+ r.formatted_address + "</p>"
 			+ "<h3 class='search-time'><span class='label label-primary'>"+Math.floor(Math.random()*50)+" min</span></h3>"
 			+ "<p class='lead search-result-box-description'>"
-				+ "<b class='gray'>Rating</b>: " + (r.rating || 'no rating') + "<br>"
-				+ "<b class='gray'>Price</b>: " + (r.price_level || 'n/a') + "<br>"
+				+ "<b class='opacity-50'>Rating</b>: " + (r.rating || 'no rating') + "<br>"
+				+ "<b class='opacity-50'>Price</b>: " + (r.price_level || 'n/a') + "<br>"
 				+ r.types.join(', ') + "<br>";
 
 			if (r.opening_hours && r.opening_hours.open_now){
@@ -79,9 +83,22 @@ function loadResults() {
 
 			//add marker to map
 			addMarker(r.name, r.geometry.location);
+			markers[r.name] = r.geometry.location;
 		}
 
 		$('#search-results').html(html);
+
+		//fade in one-by-one
+		$('.search-result-box').hide().each(function(i, el){
+			(function (i, el){
+				setTimeout(function(){
+					$(el).fadeIn();
+				}, i*200);
+			})(i, el);
+		});
+
+
+
 	});
 }
 

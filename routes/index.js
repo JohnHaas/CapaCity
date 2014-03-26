@@ -13,6 +13,7 @@ exports.search = function(req, res){
 		title: 'CapaCity | Search Results',	
 		food: req.query['search-input'],
 		location: req.query['location-input'],
+		wait: req.query['time-input'],
 		data: []
 	});
 };
