@@ -9,13 +9,21 @@ html
 		link(rel='stylesheet', href='/stylesheets/homepage-style.css')
 		link(rel='icon', type='image/png', href='/images/favicon.png')
 	body
-		div#jumbotron 
-			a(href='/')
-				img(src='/images/CapaCityLogoCropped75.png', alt="CapaCity Home")
+		div#subtron 
+			
+			ul#jumbolist
+				li.jumbolistitem
+					div#logopush
+						a.jumbobutton.background-light-green poop
 
-			form#new-search(method="get", action="/search")
-				input.search-input(type="text", name="q", size="21", maxlength="120")
-				input.search-button(type="submit", value="Search")
+				li.jumbolistitem
+					form#new-search(method="get", action="/search")
+						input.search-input(type="text", name="q", size="21", maxlength="120")
+						input.search-button(type="submit", value="Search")
+		div#jumbotron.background-periwinkle
+			a#jumbologo(href='/')
+						img(src='/images/CapaCityLogoCropped75.png', alt="CapaCity Home")
+
 		div#content-container
 			div#content.background-light-green
 				block content
