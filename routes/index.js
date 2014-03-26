@@ -12,20 +12,7 @@ exports.search = function(req, res){
 	res.render('search_results', {
 		title: 'CapaCity | Search Results',
 		query: req.query['q'] || "No query provided.",
-		data: [
-			{
-				"name": "Sakanaya",
-				"wait": "5"
-			},
-			{
-				"name": "Benehana",
-				"wait": "8"
-			},
-			{
-				"name": "Pizza Hut",
-				"wait": "35"
-			},
-		]
+		data: []
 	});
 };
 
