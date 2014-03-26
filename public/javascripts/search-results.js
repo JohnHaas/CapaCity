@@ -51,7 +51,12 @@ function getPlaces(q, callback, rad){
 	service.textSearch(request, callback);
 }
 
-
+var priceDictionary = {
+	1 : "$",
+	2 : "$$",
+	3 : "$$$",
+	4 : "$$$$"
+}
 // gets places based on query
 function loadResults() {
 
@@ -72,7 +77,7 @@ function loadResults() {
 			+ "<h3 class='search-time'><span class='label label-primary'>"+Math.floor(Math.random()*50)+" min</span></h3>"
 			+ "<p class='lead search-result-box-description'>"
 				+ "<b class='opacity-50'>Rating</b>: " + (r.rating || 'no rating') + "/5<br>"
-				+ "<b class='opacity-50'>Price</b>: " + (r.price_level || 'n/a') + "<br>";
+				+ "<b class='opacity-50'>Price</b>: " + (priceDictionary[r.price_level] || 'n/a') + "<br>";
 
 			if (r.opening_hours && r.opening_hours.open_now){
 				html += "open now!";
