@@ -10,14 +10,36 @@ $('#filterToggle').click(function(e){
 });
 
 // buttons within options
-$('.btn').button();
-// $('#wait-group .btn').button();
+$('#wait-group .btn').button()
+	.click(function(){
+		refreshResults();
+	});
 
-// $('#price-group .btn').button();
+$('#price-group .btn').button()
+	.click(function(){
+		refreshResults();
+	});
 
-// $('#dist-group .btn').button();
+$('#dist-group .btn').button()
+	.click(function(){
+		refreshResults();
+	});
 
-// $('#pref-group .btn').button();
+$('#pref-group .btn').button()
+	.click(function(){
+		refreshResults();
+	});
+
+function refreshResults () {
+	//fade in one-by-one
+	$('.search-result-box').hide().each(function(i, el){
+		(function (i, el){
+			setTimeout(function(){
+				$(el).fadeIn();
+			}, i*200);
+		})(i, el);
+	});
+}
 
 
 
@@ -43,14 +65,14 @@ function responsiveResize (){
 responsiveResize();
 
 // search-info-pane match scrolling
-$(document).scroll(function(e){
-	var scroll = document.body.scrollTop;
-	if (scroll > $('#search-results').offset().top){
-		$('#search-info-pane')
-			.addClass('search-rightpane-scroll');
-	} else {
-		$('#search-info-pane')
-			.css('position', 'relative')
-			.removeClass('search-rightpane-scroll');
-	}
-});
+// $(document).scroll(function(e){
+// 	var scroll = document.body.scrollTop;
+// 	if (scroll > $('#search-results').offset().top){
+// 		$('#search-info-pane')
+// 			.addClass('search-rightpane-scroll');
+// 	} else {
+// 		$('#search-info-pane')
+// 			.css('position', 'relative')
+// 			.removeClass('search-rightpane-scroll');
+// 	}
+// });
