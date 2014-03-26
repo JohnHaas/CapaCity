@@ -3,29 +3,54 @@ extends layout
 block content
 	div.container-fluid
 		div.row-fluid
-			div.col-md-6.div-custom#deals
-				p.homeP.text-dark-brown.text-center Deals
-				ul.ul-custom
-					li.li-link-custom
+			div.col-md-6.home-div-custom#deals
+				p.home-p.text-dark-brown.text-center Deals
+				ul.home-ul-custom
+					li.home-li-link-custom
 						a(href='/')
-								img.img-custom(src='/images/DealOne.png', alt="Deal One")
-						div.well.well-custom
+								img.home-img-custom(src='/images/DealOne.png', alt="Deal One")
+						div.well.home-well-custom
 							p An excellent deal!
-					li.li-link-custom
+						hr.home-horizontal-separator
+					li.home-li-link-custom
 						a(href='/')
-								img.img-custom(src='/images/DealTwo.png', alt="Deal Two")
-						div.well.well-custom
+								img.home-img-custom(src='/images/DealTwo.png', alt="Deal Two")
+						div.well.home-well-custom
 							p Javascript????
-					li.li-link-custom
+						hr.home-horizontal-separator
+					li.home-li-link-custom
 						a(href='/')
-								img.img-custom(src='/images/DealThree.png', alt="Deal Three")
-						div.well.well-custom
+								img.home-img-custom(src='/images/DealThree.png', alt="Deal Three")
+						div.well.home-well-custom
 							p I love wells!
-			div.col-md-6.div-custom#restaurants
-				p.homeP.text-dark-brown.text-center Restaurants
-			div.vr
+			div.col-md-6.home-div-custom#restaurants
+				p.home-p.text-dark-brown.text-center Featured Restaurants
+				ul.home-ul-custom
+					li.home-li-link-custom
+						div.well.home-well-custom
+							h3 Au Cheval
+							p Price: $$
+							p American, Bars, Diners
+							div.home-address-container
+								p.home-address.
+									800 W Randolph St
+									Chicago, IL 60607
+									Phone number (312) 929-4580
+						hr.home-horizontal-separator
+					li.home-li-link-custom
+						div.well.home-well-custom
+							h3 L2O
+							p Price: $$$$	
+							p Seafood
+						hr.home-horizontal-separator
+					li.home-li-link-custom
+						div.well.home-well-custom
+							h3 Little Goat
+							p Price: $$ 	
+							p American, Diners
+			div.home-vr
 	br
 	div.containter-fluid
-		div.col-md-12.div-custom#reviews
-			p.homeP.text-dark-brown.text-center Reviews
+		div.col-md-12.home-div-custom#reviews
+			p.home-p.text-dark-brown.text-center Reviews
 		

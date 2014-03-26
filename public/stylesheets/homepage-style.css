@@ -1,13 +1,18 @@
-.div-custom{
+.home-div-custom {
 	background-color: inherit;
 	height: 600px;
 }
 
-.well-custom{
+.well {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.home-well-custom {
 	background-color: rgba(255,255,255,.4);
 }
 
-.vr {
+.home-vr {
 	width:1px;
 	height: 500px;
 	background-color: rgba(82,82,82,.4);
@@ -16,23 +21,35 @@
 	top: 75px;
 }
 
-.ul-custom
+.home-horizontal-separator {
+	border-color: rgba(82,82,82,.4);
+}
+
+.home-ul-custom
 {
     list-style-type: none;
 }
 
-.li-link-custom{
-	padding: 10px;
+.home-li-link-custom {
+	/*padding: 10px;*/
 }
 
-.img-custom{
-	padding:5px;
+.home-img-custom {
+	padding: 5px;
 }
 
-.homeP{
+.home-p {
 	font-size: 25px;
 }
 
-#reviews {
+#home-reviews {
 	height: 500px;
+}
+
+.home-address-container {
+	float: right;
+}
+
+.home-address {
+	white-space: pre;
 }
