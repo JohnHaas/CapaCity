@@ -11,7 +11,8 @@ exports.search = function(req, res){
 	// render with mock data
 	res.render('search_results', {
 		title: 'CapaCity | Search Results',
-		query: req.query['q'] || "No query provided.",
+		food: req.query['food-input'],
+		location: req.query['location-input'],
 		data: []
 	});
 };
