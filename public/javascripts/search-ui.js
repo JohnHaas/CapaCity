@@ -3,6 +3,17 @@
  */
 
 
+// make results info appear on right when results box is clicked
+$('#search-results').on('click', 'div', function(){
+	var name = $("h4", this).text();
+	var desc = $("p", this).html();
+
+	$('#search-selected-title').text(name);
+	$('#search-selected-description').html(desc);
+	$('#search-selected-title, #search-selected-description').hide().fadeIn();
+});
+
+
 // show/hide filter options
 $('#filterToggle').click(function(e){
 	$('#search-filter-options').slideToggle();
