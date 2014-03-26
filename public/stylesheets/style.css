@@ -124,10 +124,13 @@ a {
 .subtron-button {
 	float: left;
 	display: block;
+	margin-right: 5px;
 	text-align: center;
 	text-decoration: none;
-	width: 60px;
+	width: 120px;
 	height: 25px;
+	font-size: 12px;
+	padding: 5px 10px;
 	/*padding-top: 23px;*/
 	/*padding-left: 200px;*/
 	background: #3d306a;
@@ -143,9 +146,9 @@ a {
 
 .search-input {
 	margin: 0px 5px;
-	font-size: 14px;
+	font-size: 12px;
 	color: #666;
-	padding-left: 10px;
+	padding: 5px 10px;
 	/*purple color scheme*/
 	border: 1px solid #3d306a; 
 	border-right: 0px;
@@ -161,7 +164,8 @@ a {
 
 .search-button {
 	margin-left: 5px;
-	font-size: 14px;
+	font-size: 12px;
+	padding: 5px 10px;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
