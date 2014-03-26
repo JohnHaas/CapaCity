@@ -8,14 +8,12 @@ window.addEventListener("resize", responsiveResize, true);
 
 function responsiveResize (){
 	if (window.mobile === false && document.body.clientWidth <= 568) {
-        console.log('mobile');
         window.mobile = true;
 
         //test mobile layout
         $('#search-info-pane').hide();
         $('#search-results, #content').addClass('fullsize');
     } else if (window.mobile === true && document.body.clientWidth > 568){
-    	console.log('desktop');
     	window.mobile = false;
 
     	//test desktop layout
@@ -27,5 +25,13 @@ responsiveResize();
 
 // search-info-pane match scrolling
 $(document).scroll(function(e){
-	console.log(e);
+	var scroll = document.body.scrollTop;
+	if (scroll > $('#search-results').offset().top){
+		$('#search-info-pane')
+			.addClass('search-rightpane-scroll');
+	} else {
+		$('#search-info-pane')
+			.css('position', 'relative')
+			.removeClass('search-rightpane-scroll');
+	}
 });

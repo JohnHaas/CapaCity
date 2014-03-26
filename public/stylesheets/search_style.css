@@ -40,8 +40,18 @@
 
 
 #search-info-pane{
-	margin-left: 37%;
 	padding-left: 25px;
+	position: relative;
+	top: 10px;
+	margin-left: 37%;
+}
+
+.search-rightpane-scroll{
+	position: fixed !important;
+	margin-right: 13%;
+	padding-right: 30px;
+	/*left: 47px;*/
+	left: 4.05%;	/* pretty sure there's a better way */
 }
 
 #search-info-pane:after{
