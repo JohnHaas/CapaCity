@@ -225,6 +225,7 @@ a {
 	margin: 100px 13%;
 	border: solid 1px #CCCCCC;
 	padding: 30px;
+	overflow: hidden;
 }
 
 #powered-by-google{
