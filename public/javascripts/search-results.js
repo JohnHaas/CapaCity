@@ -52,6 +52,7 @@ function getPlaces(q, callback, rad){
 }
 
 var priceDictionary = {
+	0 : "Free",
 	1 : "$",
 	2 : "$$",
 	3 : "$$$",
@@ -80,7 +81,9 @@ function loadResults() {
 				+ "<b class='opacity-50'>Price</b>: " + (priceDictionary[r.price_level] || 'n/a') + "<br>";
 
 			if (r.opening_hours && r.opening_hours.open_now){
-				html += "open now!";
+				html += "Open Now!";
+			} else {
+				hteml += "Currently Closed";
 			}
 
 			html += "</p></div>";
