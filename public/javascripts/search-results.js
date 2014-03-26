@@ -25,6 +25,9 @@ var map = new google.maps.Map(document.getElementById('search-map'), {
   zoom: 15
 });
 
+// Dictionary of restuarant name to map location
+var markers = {};
+
 // adds a marker to the map
 // params: name, latlong position
 function addMarker(name, latlong) {
@@ -80,6 +83,7 @@ function loadResults() {
 
 			//add marker to map
 			addMarker(r.name, r.geometry.location);
+			markers[r.name] = r.geometry.location;
 		}
 
 		$('#search-results').html(html);

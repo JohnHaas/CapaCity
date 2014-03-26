@@ -11,6 +11,14 @@ $('#search-results').on('click', 'div', function(){
 	$('#search-selected-title').text(name);
 	$('#search-selected-description').html(desc);
 	$('#search-selected-title, #search-selected-description').hide().fadeIn();
+
+	//map zoom onto marker
+	var loc = markers[name];
+	if (typeof map._zoom === 'undefined'){
+		map._zoom = map.zoom - 1;
+		map.setZoom(map._zoom);
+	}
+	map.panTo(loc);
 });
 
 
