@@ -21,6 +21,11 @@ a {
 	top: 75px;
 }
 
+.home-review-container{
+	position: relative;
+	left: 30%;
+}
+
 .home-horizontal-separator {
 	border-color: rgba(82,82,82,.4);
 	width: 90%;
@@ -31,6 +36,11 @@ a {
     list-style-type: none;
 }
 
+.home-button-custom
+{
+	margin: 5px;
+}
+
 .home-li-link-custom {
 	/*padding: 10px;*/
 }
@@ -39,12 +49,20 @@ a {
 	padding: 5px;
 }
 
+.home-review-img-custom{
+	padding-bottom: 10px;
+}
+
 .home-p {
 	font-size: 25px;
 }
 
-.home-user-p{
-	
+.home-rating-p{
+	font-size: 20px;
+}
+
+.home-review-header{
+	display: inline;
 }
 
 #home-reviews {
