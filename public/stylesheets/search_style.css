@@ -78,6 +78,10 @@
 	margin: 0;
 }
 
+.no-padding{
+	padding: 0;
+}
+
 .opacity-50{
 	opacity: .5;
 }
@@ -110,4 +114,9 @@
 
 .search-info-box{
 	display: none;
+}
+
+#search-reviews {
+	overflow: auto;
+	height: 1100px;
 }

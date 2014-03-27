@@ -14,7 +14,8 @@ html
 		div#subtron 
 			ul#subtron-list
 				li.subtron-list-item
-					a.subtron-button.background-purple(href='/') Home
+					a.subtron-button.background-purple(href="/") Home
+					
 				li.subtron-list-item
 					form#new-search(method="get", action="/search")
 						input.search-input(type="text", name="search-input", size="21", maxlength="120", placeholder="Search For Food")
@@ -35,7 +36,7 @@ html
 			a#jumbotron-logo(href='/')
 						img(src='/images/CapaCityLogoCropped75.png', alt="CapaCity Home")
 		div#content-container
-			div#content.background-light-green
+			div#page-content.background-light-green
 				block content
 			div#bottom-container
 				div.info

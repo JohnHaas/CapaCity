@@ -24,9 +24,13 @@ var map = new google.maps.Map(document.getElementById('search-map'), {
   center: origin,
   zoom: 15
 });
+var service = new google.maps.places.PlacesService(map);
 
 // Dictionary of restuarant name to map location
 var markers = {};
+
+// Dictionary of restaurant reference ID's to details (e.g. phone number)
+var details = {};
 
 // adds a marker to the map
 // params: name, latlong position
@@ -36,6 +40,8 @@ function addMarker(name, latlong) {
 	    map: map,
 	    title: name
 	});
+
+	return marker;
 }
 
 //Given a query, and optional radius,
@@ -47,42 +53,85 @@ function getPlaces(q, callback, rad){
 		query: q
 	};
 
-	var service = new google.maps.places.PlacesService(map);
 	service.textSearch(request, callback);
 }
 
+var previousInfoWindow = null;
+function addMarkerListener(infowindow, marker, contentString) {
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(contentString);
+		infowindow.open(map, marker);
+	});
+}
 
+var priceDictionary = {
+	0 : "Free",
+	1 : "$",
+	2 : "$$",
+	3 : "$$$",
+	4 : "$$$$"
+}
+
+var infowindows = {}
 // gets places based on query
 function loadResults() {
 
 	getPlaces(food, function(results){
 		var html = "";
-
-		// limit to 5 results
-		var limit = 5;
+		var infowindow = new google.maps.InfoWindow();
+		// limit to 8 results
+		var limit = 8;
 		var len = (results.length < limit) ? results.length : limit;
 		for (var i=0; i<len; i++){
 			var r = results[i];
 
 			// construct html string for each result
-			html += "<div class='search-result-box'>"
+			html += "<div class='search-result-box' reference='"+r.reference+"'>"
 			+ "<h4>"+r.name+"</h4>"
 			+ "<p class='lead search-result-box-description'>"
 				+ r.formatted_address + "</p>"
 			+ "<h3 class='search-time'><span class='label label-primary'>"+Math.floor(Math.random()*50)+" min</span></h3>"
 			+ "<p class='lead search-result-box-description'>"
-				+ "<b class='opacity-50'>Rating</b>: " + (r.rating || 'no rating') + "/5<br>"
-				+ "<b class='opacity-50'>Price</b>: " + (r.price_level || 'n/a') + "<br>";
+				+ "<b class='opacity-50'>Rating</b>: " + (r.rating || 'No Rating') + "/5<br>"
+				+ "<b class='opacity-50'>Price</b>: " + (priceDictionary[r.price_level] || 'N/A') + "<br>";
 
 			if (r.opening_hours && r.opening_hours.open_now){
-				html += "open now!";
+				html += "Open Now!";
+			} else {
+				html += "Currently Closed";
 			}
 
 			html += "</p></div>";
 
+			var infoContent = "<div id='content'>" +
+			 '<div id="siteNotice">'+
+    		'</div>'+
+    		'<h1 id="firstHeading" class="firstHeading">' + r.name + '</h1>'+
+      		'<div id="bodyContent">'+
+    		'<p>'+
+    		'<b>Address: </b>'+r.formatted_address+'<br>'+
+    		// '<b>Phone Number: </b>'+r.formatted_phone_number+'<br>'+
+    		// '<b>Website: </b><a href="'+r.website+'">'+r.website+'</a><br>'+
+    		'<b class="opacity-50">Rating</b>: '+(r.rating || 'No Rating') + "/5<br>"+
+    		'<b class="opacity-50">Price</b>: '+(priceDictionary[r.price_level] || 'N/A')+'<br>'+
+    		'</p>'+
+      		'</div>'+
+      		'</div>';
+
 			//add marker to map
-			addMarker(r.name, r.geometry.location);
+			var marker = addMarker(r.name, r.geometry.location);
+			addMarkerListener(infowindow, marker, infoContent);
 			markers[r.name] = r.geometry.location;
+			infowindows[r.name] = infowindow;
+
+			//make request to get restaurant details (e.g. phone number)
+			(function(ref) {
+				service.getDetails({
+					reference: ref,
+				}, function(data){
+					details[ref] = data;
+				});
+			})(r.reference);
 		}
 
 		$('#search-results').html(html);
@@ -95,9 +144,6 @@ function loadResults() {
 				}, i*200);
 			})(i, el);
 		});
-
-
-
 	});
 }
 
