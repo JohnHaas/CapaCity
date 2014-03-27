@@ -62,7 +62,7 @@ $('#search-results').on('click', 'div', function(){
 			+ "</li>"
 			+ "<hr class='home-horizontal-separator />";
 		}
-		console.log(html)
+		
 		$($('.search-ul-custom')[0]).html(unescape(html));
 	}
 });
