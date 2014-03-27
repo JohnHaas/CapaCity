@@ -54,14 +54,10 @@ function getPlaces(q, callback, rad){
 }
 
 var previousInfoWindow = null;
-function addMarkerListener(infowindow, marker) {
+function addMarkerListener(infowindow, marker, contentString) {
 	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(contentString);
 		infowindow.open(map, marker);
-		if (previousInfoWindow !== infowindow && previousInfoWindow !== null) {
-			previousInfoWindow.close();
-			previousInfoWindow = infowindow;
-			console.log("asdfasdfasdf");
-		}
 	});
 }
 
@@ -79,7 +75,7 @@ function loadResults() {
 
 	getPlaces(food, function(results){
 		var html = "";
-
+		var infowindow = new google.maps.InfoWindow();
 		// limit to 8 results
 		var limit = 8;
 		var len = (results.length < limit) ? results.length : limit;
@@ -111,20 +107,17 @@ function loadResults() {
       		'<div id="bodyContent">'+
     		'<p>'+
     		'<b>Address: </b>'+r.formatted_address+'<br>'+
-    		'<b>Phone Number: </b>'+r.formatted_phone_number+'<br>'+
-    		'<b>Website: </b><a href="'+r.website+'">'+r.website+'</a><br>'+
+    		// '<b>Phone Number: </b>'+r.formatted_phone_number+'<br>'+
+    		// '<b>Website: </b><a href="'+r.website+'">'+r.website+'</a><br>'+
     		'<b class="opacity-50">Rating</b>: '+(r.rating || 'No Rating') + "/5<br>"+
     		'<b class="opacity-50">Price</b>: '+(priceDictionary[r.price_level] || 'N/A')+'<br>'+
     		'</p>'+
       		'</div>'+
       		'</div>';
 
-      		var infowindow = new google.maps.InfoWindow({
-      			content : infoContent
-      		});
 			//add marker to map
 			var marker = addMarker(r.name, r.geometry.location);
-			addMarkerListener(infowindow, marker);
+			addMarkerListener(infowindow, marker, infoContent);
 			markers[r.name] = r.geometry.location;
 			infowindows[r.name] = infowindow;
 		}
