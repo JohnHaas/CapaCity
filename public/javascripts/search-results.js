@@ -24,9 +24,13 @@ var map = new google.maps.Map(document.getElementById('search-map'), {
   center: origin,
   zoom: 15
 });
+var service = new google.maps.places.PlacesService(map);
 
 // Dictionary of restuarant name to map location
 var markers = {};
+
+// Dictionary of restaurant reference ID's to details (e.g. phone number)
+var details = {};
 
 // adds a marker to the map
 // params: name, latlong position
@@ -49,7 +53,6 @@ function getPlaces(q, callback, rad){
 		query: q
 	};
 
-	var service = new google.maps.places.PlacesService(map);
 	service.textSearch(request, callback);
 }
 
@@ -87,7 +90,7 @@ function loadResults() {
 			var r = results[i];
 
 			// construct html string for each result
-			html += "<div class='search-result-box'>"
+			html += "<div class='search-result-box' reference='"+r.reference+"'>"
 			+ "<h4>"+r.name+"</h4>"
 			+ "<p class='lead search-result-box-description'>"
 				+ r.formatted_address + "</p>"
@@ -127,6 +130,15 @@ function loadResults() {
 			addMarkerListener(infowindow, marker);
 			markers[r.name] = r.geometry.location;
 			infowindows[r.name] = infowindow;
+
+			//make request to get restaurant details (e.g. phone number)
+			(function(ref) {
+				service.getDetails({
+					reference: ref,
+				}, function(data){
+					details[ref] = data;
+				});
+			})(r.reference);
 		}
 
 		$('#search-results').html(html);
